@@ -86,23 +86,9 @@ public class EmployeeManager {
                 {
                     String inputString = readFile(constants.EMPLOYEE_FILE_LOCATION);
                     char[] charsList = inputString.toCharArray();
-                    boolean inWord = false;
-                    int count = 0;
-                    for (char c : charsList) 
-                    {
-                        if (c == ' ') 
-                        {
-                            if (!inWord) 
-                            {
-                                count++;
-                                inWord = true;
-                            } else 
-                            {
-                                inWord = false;
-                            }
-                        }
-                    }
-                    System.out.println(count + " word(s) found " + charsList.length);
+                    String wordList[] = inputString.split(",");
+
+                    System.out.println(wordList.length + " word(s) found " + charsList.length);
                 } 
                 catch (Exception e) 
                 {}
