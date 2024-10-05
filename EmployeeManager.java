@@ -71,15 +71,11 @@ public class EmployeeManager {
 
                     String inputString = readFile(constants.EMPLOYEE_FILE_LOCATION);
                     String wordList[] = inputString.split(",");
-                    boolean found = false;
                     String nameString = args[0].substring(1);
-                    for (int i = 0; i < wordList.length && !found; i++) 
-                    {
-                        if (wordList[i].equals(nameString)) 
-                        {
-                            System.out.println("Employee found!");
-                            found = true;
-                        }
+                    for(String name:wordList){
+                        if(name.equals(nameString));
+                        System.out.println("Employee found! := " + nameString);
+                        break;
                     }
                 System.out.println(constants.LOADED_MESSAGE);
             } 
