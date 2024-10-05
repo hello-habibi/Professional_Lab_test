@@ -38,8 +38,7 @@ public class EmployeeManager {
             if (args[0].equals("l")) 
             {
                 System.out.println(constants.LOADING_MESSAGE);  
-                    String scannedString = readFile(constants.EMPLOYEE_FILE_LOCATION);
-                    String employeeList[] = scannedString.split(",");
+                    String employeeList[] = readFile(constants.EMPLOYEE_FILE_LOCATION).split(",");
                     for (String emp : employeeList) 
                     {
                         System.out.println(emp);
